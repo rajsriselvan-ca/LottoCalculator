@@ -1,3 +1,17 @@
+:root {
+    --background-color: #4a4a4a;
+    --header-bg-color: #000000;
+    --header-text-color: white;
+    --new-label-bg-color: #fc6200;
+    --new-label-text-color: white;
+    --tile-bg-color: #272727;
+    --tile-header-bg-color: #000000;
+    --tile-header-text-color: white;
+    --button-bg-color: #fc6200;
+    --button-hover-bg-color: #e28743;
+    --input-border-color: #ccc;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -18,72 +32,74 @@ body {
 .container {
     height: 100%;
     width: 100%;
-    background-color: #4a4a4a;
+    background-color: var(--background-color);
     display: flex;
     flex-direction: column;
 }
 
 header {
-    background-color: #000000; 
-    color: white; 
-    padding: 20px; 
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    padding: 20px;
     height: 10%;
-    width: 90%; 
+    width: 90%;
     margin-top: 40px;
     margin-left: 50px;
-    text-align: left; 
-    box-sizing: border-box; 
-    position: relative; 
+    text-align: left;
+    box-sizing: border-box;
+    position: relative;
     display: flex;
     align-items: center;
 }
 
 .new-label {
-    background-color: #fc6200;
-    color: white; 
-    padding: 6px 10px; 
-    position: absolute; 
-    top: 48%; 
-    right: 5%; 
+    background-color: var(--new-label-bg-color);
+    color: var(--new-label-text-color);
+    padding: 6px 10px;
+    position: absolute;
+    top: 48%;
+    right: 5%;
     transform: translate(50%, -50%) rotate(37deg);
-    border-radius: 3px; 
-    font-weight: bold; 
+    border-radius: 3px;
+    font-weight: bold;
 }
 
 main {
     display: flex;
     padding: 12px;
     box-sizing: border-box;
-    gap: 10px; 
+    gap: 10px;
     height: 80%;
 }
 
 .tile {
-    background-color: #272727;
-    box-sizing: border-box; 
+    background-color: var(--tile-bg-color);
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    color: white;
+    color: var(--tile-header-text-color);
 }
 
 .tile-header {
-    background-color: #000000; 
-    color: white;
-    padding: 10px; 
-    margin: 0; 
-    box-sizing: border-box; 
-    width: 100%; 
-}
-.tile-header-result{
-    background-color: #000000; 
-    color: white; 
+    background-color: var(--tile-header-bg-color);
+    color: var(--tile-header-text-color);
     padding: 10px;
-    margin: 0; 
-    box-sizing: border-box; 
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.tile-header-result {
+    background-color: var(--tile-header-bg-color);
+    color: var(--tile-header-text-color);
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
     width: 100%;
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
+
 .tile-header-result .right {
     position: relative;
     left: 30%;
@@ -100,47 +116,50 @@ main {
     flex-direction: column;
     height: 100%;
     width: 65%;
-    gap: 10px; 
+    gap: 10px;
 }
 
 .tile2 {
     height: 30%;
     width: 100%;
 }
-.tile3  {
+
+.tile3 {
     height: 70%;
     width: 100%;
 }
+
 .tile-body {
     margin: 10px;
 }
+
 .tile-body-input {
     display: flex;
     position: relative;
-    top:20%;
+    top: 20%;
     left: 1%;
-    align-items: center; 
-    gap: 10px; 
+    align-items: center;
+    gap: 10px;
     cursor: pointer;
 }
 
 .tile-body-input input {
     padding: 10px;
     width: 30%;
-    border: 1px solid #ccc;
+    border: 1px solid var(--input-border-color);
     border-radius: 5px;
     cursor: pointer;
 }
 
 .tile-body-input button {
     padding: 10px 20px;
-    background-color: #fc6200;
-    color: white;
+    background-color: var(--button-bg-color);
+    color: var(--new-label-text-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .tile-body-input button:hover {
-    background-color: #e28743;
+    background-color: var(--button-hover-bg-color);
 }
