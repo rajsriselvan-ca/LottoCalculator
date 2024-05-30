@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Images/lottoIcon.png" type="image/png">
+    <title>Lotto Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <p>Lotto Calculator</p>
+            <span class="new-label">New</span>
+        </header>
+        <main>
+            <div class="tile tile1">
+                <div class="tile-header">The Irish Lotto</div>
+                <div class="tile-body">
+                    <p>Since 16<sup>th</sup> April 1988, the Irish Lotto draw takes place every Saturday at 8pm. On 30<sup>th</sup> May 1990 an additional Wednesday evening draw was introduced.</p>
+                    <br/>
+                    <p>Enter a date in the form to get the next three draw dates as well as the previous two draws.</p>
+                    </div>
+            </div>
+            <div class="right-tiles">
+                <div class="tile tile2">
+                    <div class="tile-header">Enter a Date and Time</div>
+                    <div class="tile-body-input">
+                        <input type="datetime-local" id="datetime-input">
+                        <button >Submit</button>
+                    </div>
+                </div>
+                <div class="tile tile3">
+                    <div class="tile-header-result">
+                        <span class="left">DRAW DATE</span>
+                        <span class="right">PAST OR FUTURE</span>
+                    </div>
+                    <div class="tile-body">Content for tile 3</div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
