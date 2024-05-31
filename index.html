@@ -27,7 +27,7 @@
                     <div class="tile-header">Enter a Date and Time</div>
                     <div class="tile-body-input">
                         <input type="datetime-local" id="datetime-input">
-                        <button >Submit</button>
+                        <button onclick="calculateDrawDates()">Submit</button>
                     </div>
                 </div>
                 <div class="tile tile3">
@@ -35,7 +35,12 @@
                         <span class="left">DRAW DATE</span>
                         <span class="right">PAST OR FUTURE</span>
                     </div>
-                    <div class="tile-body">Content for tile 3</div>
+                    <div class="tile-body">
+                        <table id="results-table">
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </main>
