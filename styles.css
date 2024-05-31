@@ -52,18 +52,21 @@ header {
     position: relative;
     display: flex;
     align-items: center;
+    overflow: hidden; 
 }
 
 .new-label {
-    background-color: var(--new-label-bg-color);
-    color: var(--new-label-text-color);
-    padding: 6px 10px;
     position: absolute;
-    top: 48%;
-    right: 5%;
-    transform: translate(50%, -50%) rotate(37deg);
-    border-radius: 3px;
+    background: var(--new-label-bg-color);
+    color: var(--new-label-text-color);
+    padding: 2px 2px;
     font-weight: bold;
+    transform-origin: 0 0; 
+    transform: translate(29.3%) rotate(45deg);
+    box-shadow: 0 0 0 999px var(--new-label-bg-color);
+    clip-path: inset(0 -100%);
+    top: 0;
+    right: 0;
 }
 
 main {
@@ -105,6 +108,20 @@ main {
 .tile-header-result .right {
     position: relative;
     left: 40%;
+}
+
+@media (min-width: 1440px) {
+    .tile-header-result .right {
+        position: relative;
+        left: 400px;
+    }
+}
+
+@media (min-width: 2560px) {
+    .tile-header-result .right {
+        position: relative;
+        left: 830px;
+    }
 }
 
 .tile1 {
@@ -202,5 +219,70 @@ main {
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+@media (max-width: 767px) {
+
+    header {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .new-label {
+        padding: 2px;
+        transform: translate(20%) rotate(45deg);
+    }
+
+    main {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .tile1, .right-tiles {
+        width: 100%;
+        margin-left: 0;
+        gap: 5px;
+    }
+
+    .tile1, .tile2, .tile3 {
+        height: auto;
+        width: 100%;
+    }
+
+    .tile-header, .tile-header-result {
+        padding: 5px;
+    }
+
+    .tile-header-result .right {
+        position: relative;
+        left: 20%;
+    }
+
+    .tile-body-input {
+        flex-direction: column;
+        top: 0;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .tile-body-input input {
+        width: 50%;
+        padding: 5px;
+    }
+
+    .tile-body-input button {
+        width: 20%;
+        padding: 5px;
+    }
+
+    .tile-body table {
+        font-size: 0.8em;
+    }
+
+    .tile-body th, .tile-body td {
+        padding: 8px 10px;
+    }
 }
 
